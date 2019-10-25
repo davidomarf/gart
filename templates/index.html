@@ -2,11 +2,14 @@
 {% block content %}
 <div class="container">
     <h1> {{ site.sitename }}</h1>
-    <p>{{ site.description }} by {{ site.author }}</p>
+    <p>{{ site.description }}</p>
     {% for s in sketches %}
     {% set s_title = s.split("/")[-1].split(".")[0] %}
     <li> <a href="{{s_title}}">{{s_title | unkebab | title}}</a></li>
     {% endfor %}
+</div>
+<div class="container footer">
+    <p>{{ site.author }} &mdash; 2019</p>
 </div>
 
 {% endblock %}
