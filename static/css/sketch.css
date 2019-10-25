@@ -2,24 +2,31 @@
 
 html,
 body {
-  height: 100%;
   margin: 0;
   background-color: #fbfbfb;
 }
 
-.fscreen {
-  display: flex;
-  flex-direction: column;
-}
-
-.content {
-  display: flex;
+.grid {
+  position: fixed;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas:
+    ".       content";
+  grid-template-columns: 250px 1fr;
 }
 
 .form-container {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  max-width: 250px;
+  word-wrap: break-word;
+
   display: flex;
   flex-direction: column;
-
   padding: 1em;
   margin: 1em;
 }
@@ -29,24 +36,31 @@ form {
   flex-direction: column;
 }
 
-#artwork-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.credits {
+  font-size: .9em;
 
-  padding: 1em;
-  margin: 1em;
+}
+
+#artwork-container {
+  grid-area: content;
+
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
 }
 
 canvas {
-  max-width: 100% !important;
+  max-width:95% !important;
+  max-height: 95% !important;
   height: auto !important;
+  width: auto !important;
 }
 
 .footer {
-  flex: 0 1 auto;
-  padding: 0 1em 1em;
-  margin: 0 1em;
+  font-size: .8em;
+  font-family: monospace;
+  color: #606060;
 }
 
 label {
@@ -104,6 +118,16 @@ button:hover {
 
 a {
   flex: 0 1 min-content;
+}
+
+
+.dimension-input {
+  display: flex;
+  justify-content: space-between;
+}
+.dimension-input span {
+  color: #666;
+  font-size: .75em;
 }
 
 .home-link {
@@ -196,13 +220,4 @@ input[type="range"]:focus::-ms-fill-lower {
 }
 input[type="range"]:focus::-ms-fill-upper {
   background: #eee;
-}
-
-.dimension-input {
-  display: flex;
-  justify-content: space-between;
-}
-.dimension-input span {
-  color: #666;
-  font-size: .75em;
 }
