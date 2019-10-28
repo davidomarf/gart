@@ -16,16 +16,17 @@
     <h3>{{sketch | title}}</h3>
         {{ form }}
 
-        <!-- <button type="button" onclick="randomizeVars();">
-                    <u>R</u>andomize
-                </button>
 
+        <!--
                 <button type="button" onclick="updateVars(); setup(); draw();">
                     <u>D</u>raw
                 </button> -->
 
         <button type="button" onclick="save();">
             <u>S</u>ave
+        </button>
+        <button type="button" onclick="newRandomSeeds(); resetDraw(); ">
+            <u>N</u>ew Seeds
         </button>
         <hr>
         <div class="credits"> {{sketch | title}}, by {{ site.author }}. 2019. </div class="credits">

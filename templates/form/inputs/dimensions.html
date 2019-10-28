@@ -1,0 +1,18 @@
+<div class="form-field">
+    <label for="{{ param.id }}">
+        {{ param.name }}
+    </label>
+    <div class="dimension-input">
+        <input name="dimension-w" type="number"
+            id = "{{ param.id }}-0"
+            value="{{ param.attrs.value[0] }}"
+            min="{{ param.attrs.min or 0}}"
+            max="{{ param.attrs.max or 9999}}">
+        <span>x</span>
+        <input name="dimension-h" type="number" 
+            id = "{{ param.id }}-1"
+            value="{{ param.attrs.value[1] }}"
+            min="{{ param.attrs.min or 0 }}"
+            max="{{ param.attrs.max or 9999 }}">
+    </div>
+</div>
