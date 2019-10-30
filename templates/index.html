@@ -5,10 +5,9 @@
     <p>{{ site.description }}</p>
     <div class="sketches-list">
         {% for s in sketches %}
-        {% set s_title = s.split("/")[-1].split(".")[0] %}
         <li> 
-            <span class = "sketch-date"> {{ "2019.10.25" }} | </span> 
-            <a href="{{s_title}}" style="font-weight: bold;"> {{s_title | unkebab | title}} </a>
+            <span class = "sketch-date"> {{ s["data"]["date"] }} | </span> 
+            <a href="{{s_title}}" style="font-weight: bold;"> {{ s.name | unkebab | title }} </a>
         </li>
         {% endfor %}
     </div>
