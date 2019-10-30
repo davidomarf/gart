@@ -3,12 +3,22 @@
 <div class="container">
     <h1> {{ site.sitename }}</h1>
     <p>{{ site.description }}</p>
-    {% for s in sketches %}
-    {% set s_title = s.split("/")[-1].split(".")[0] %}
-    <li> <a href="{{s_title}}">{{s_title | unkebab | title}}</a></li>
-    {% endfor %}
+    <div class="sketches-list">
+        {% for s in sketches %}
+        {% set s_title = s.split("/")[-1].split(".")[0] %}
+        <li> 
+            <span class = "sketch-date"> {{ "2019.10.25" }} | </span> 
+            <a href="{{s_title}}" style="font-weight: bold;"> {{s_title | unkebab | title}} </a>
+        </li>
+        {% endfor %}
+    </div>
 </div>
+
 <div class="container footer">
+    <hr style="height: 1px;
+    color: #606060;
+    background-color: #606060;
+    border: none;">
     <p> <a href="{{ site.author_url }}">{{ site.author }}</a> &mdash; 2019 </p>
 </div>
 

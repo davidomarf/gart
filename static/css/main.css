@@ -35,12 +35,28 @@ a:hover {
   border-bottom: dotted #555 1px;
 }
 
-li {
-  margin: 0;
+.sketch-date{
+  font-family: "Fira Mono";
+  color: rgb(155, 155, 155);
+  
 }
 
-li:not(last-of-type) {
-  margin-bottom: 0.4rem;
+.sketches-list{
+  margin-top: 2em;
+}
+
+ul {
+  list-style-type:none;
+}
+
+.container h1{
+  padding-top: 1em;
+}
+
+li {
+  list-style:none;
+  line-height: 2em;
+  font-family: "Fira Mono";
 }
 
 article,section {
@@ -78,4 +94,6 @@ h2,h3,h4,h5,h6 {
 
 .container.footer {
   color: #606060;
+  font-family: monospace;
+  margin-top: 5em;
 }
