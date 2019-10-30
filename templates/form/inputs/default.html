@@ -1,0 +1,6 @@
+<div class="form-field">
+    <label for="{{ param.id }}">
+        {{ param.name }}
+    </label>
+    <input name="{{ param.id }}" id = "{{ param.id }}" {{ param.attrs | getattrs }} onchange="resetDraw();">
+</div>
