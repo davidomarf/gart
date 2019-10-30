@@ -7,7 +7,7 @@
         {% for s in sketches %}
         <li> 
             <span class = "sketch-date"> {{ s["data"]["date"] }} | </span> 
-            <a href="{{s_title}}" style="font-weight: bold;"> {{ s.name | unkebab | title }} </a>
+            <a href="{{ s.name }}" style="font-weight: bold;"> {{ s.name | unkebab | title }} </a>
         </li>
         {% endfor %}
     </div>
