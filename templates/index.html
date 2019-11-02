@@ -14,11 +14,27 @@
 </div>
 
 <div class="container footer">
-    <hr style="height: 1px;
-    color: #606060;
-    background-color: #606060;
+    <hr style="height: 2px;
+    color: #BBBBBB;
+    background-color: #BBBBBB;
     border: none;">
-    <p> <a href="{{ site.author_url }}">{{ site.author }}</a> &mdash; 2019 </p>
+    <p> 
+    {% if site.links is defined %}
+        {% for link in site.links -%}
+            {% for title, url in link.items() -%}
+                <span class="social-link">
+                    <a href= "{{ url }}" target="_blank">{{ title }}</a>
+                </span>
+            {%- endfor %}
+        {%- endfor %}
+    </p>
+    <p>    
+    {% endif %}
+    2019 &middot; <a href="{{ site.author_url }}">{{ site.author }}</a>
+    <br>
+    Interactive sketches generated with
+    <a href="https://github.com/davidomarf/ginpar/">Ginpar</a>.
+    </p>
 </div>
 
 {% endblock %}

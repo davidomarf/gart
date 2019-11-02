@@ -97,3 +97,11 @@ h2,h3,h4,h5,h6 {
   font-family: monospace;
   margin-top: 5em;
 }
+
+.social-link {
+  color: #303030;
+}
+
+.social-link:not(:last-of-type)::after{
+  content: "·"
+}
