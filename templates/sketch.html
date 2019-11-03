@@ -22,10 +22,10 @@
                     <u>D</u>raw
                 </button> -->
 
-        <button type="button" onclick="save();">
+        <button type="button" onclick="ginpar_save();">
             <u>S</u>ave
         </button>
-        <button type="button" onclick="newRandomSeeds(); resetDraw(); ">
+        <button type="button" onclick="ginpar_newRandomSeeds(); ginpar_resetDraw(); ">
             <u>N</u>ew Seeds
         </button>
         <hr>
@@ -45,6 +45,11 @@
 {% for script in scripts -%}
     <script language="javascript" type="text/javascript" src="{{ script.url }}"></script>
 {%- endfor %}
+<<<<<<< HEAD
 
     <script language="javascript" type="text/javascript" src="./sketch.js" defer></script>
 {% endblock scripts %}
+=======
+<script language="javascript" type="text/javascript" src="./sketch.js" defer></script>
+{% endblock scripts %}
+>>>>>>> fd69a924ed6116f3a1de2579d956883ab90cc21f
