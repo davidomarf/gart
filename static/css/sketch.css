@@ -6,29 +6,35 @@ body {
   background-color: #fbfbfb;
 }
 
+.sketch-title {
+  font-size: 2.15rem;
+  padding: 1rem 0 1rem 0;
+}
+
 .grid {
-  position: fixed;
   display: grid;
-  width: 100%;
-  height: 100vh;
-  grid-template-areas:
-    ".       content";
   grid-template-columns: 250px 1fr;
+  grid-template-areas: "form canvas";
+  height: 100vh;
 }
 
 .form-container {
+  grid-area: form;
   position: absolute;
 
   top: 0;
   left: 0;
 
-  max-width: 250px;
-  word-wrap: break-word;
-
   display: flex;
   flex-direction: column;
   padding: 1em;
   margin: 1em;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  height: 90vh;
+  max-width: 270px;
 }
 
 form {
@@ -37,56 +43,64 @@ form {
 }
 
 .credits {
-  font-size: .9em;
-
+  font-size: 0.9em;
 }
 
 #artwork-container {
-  grid-area: content;
+  grid-area: canvas;
 
   display: flex;
   /* flex-direction: row; */
   justify-content: center;
   align-items: center;
+  height: 90vh;
 }
 
 canvas {
-  max-width:95% !important;
+  max-width: 95% !important;
   max-height: 95% !important;
   height: auto !important;
   width: auto !important;
 }
 
 .footer {
-  font-size: .8em;
+  font-size: 0.8em;
   font-family: monospace;
   color: #606060;
 }
 
 label {
-  color: #666;
-  margin-bottom: 0.5em;
-  font-size: 0.75em;
+  color: #646464;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1em;
+  font-weight: 600;
 }
-
 input {
   font-family: "Montserrat";
+  margin-top: 1rem;
   border: none;
   border-bottom: solid #eee 2px;
-  padding: 0.25em;
-  background-color: inherit;
+  padding: 10px 10px 10px 5px;
+  background: none;
+  font-size: 18px;
+  border-radius: 0;
+  border-bottom: 2px solid #eeeeee;
+  transition: all 300ms ease;
 }
 
 input:focus {
-  border-bottom: solid #ccc 2px;
+  border-bottom: solid #9ee2ff 2px;
   outline: none;
   box-shadow: none;
+  transition: all 300ms ease;
 }
 
 input:active {
-  border-bottom: solid #ccc 2px;
+  border-bottom: solid #9ee2ff 2px;
   outline: none;
   box-shadow: none;
+  transition: all 300ms ease;
 }
 
 button {
@@ -120,14 +134,13 @@ a {
   flex: 0 1 min-content;
 }
 
-
 .dimension-input {
   display: flex;
   justify-content: space-between;
 }
 .dimension-input span {
   color: #666;
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 .home-link {
