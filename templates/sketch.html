@@ -39,11 +39,10 @@
 {% endblock %}
 
 {% block scripts %}
-
-{% set scripts = sketch.scripts or site.scripts %}
+{% set scripts = sketch.data.scripts or site.scripts | list %}
 
 {% for script in scripts -%}
-    <script language="javascript" type="text/javascript" src="{{ script.url }}"></script>
+    <script language="javascript" type="text/javascript" src="{{ site.scripts[script] }}"></script>
 {%- endfor %}
 
     <script language="javascript" type="text/javascript" src="./sketch.js" defer></script>
