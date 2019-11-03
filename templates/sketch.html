@@ -13,7 +13,7 @@
     <div class="home-link">
         <a href="/"> < Go back home </a>
     </div>
-    <h3>{{sketch | title}}</h3>
+    <h3>{{sketch.name | title}}</h3>
         {{ form }}
 
 
@@ -39,9 +39,12 @@
 {% endblock %}
 
 {% block scripts %}
-{% set scripts = scripts or site.scripts %}
+
+{% set scripts = sketch.scripts or site.scripts %}
+
 {% for script in scripts -%}
-<script language="javascript" type="text/javascript" src="{{ script.url }}"></script>
+    <script language="javascript" type="text/javascript" src="{{ script.url }}"></script>
 {%- endfor %}
-<script language="javascript" type="text/javascript" src="./sketch.js" defer></script>
+
+    <script language="javascript" type="text/javascript" src="./sketch.js" defer></script>
 {% endblock scripts %}
