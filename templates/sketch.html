@@ -16,18 +16,14 @@
     <h3>{{sketch.name | title}}</h3>
         {{ form }}
 
-
-        <!--
-                <button type="button" onclick="updateVars(); setup(); draw();">
-                    <u>D</u>raw
-                </button> -->
-
         <button type="button" onclick="ginpar_save();">
             <u>S</u>ave
         </button>
+        {% if sketch.data.global_seed -%}
         <button type="button" onclick="ginpar_newRandomSeeds(); ginpar_resetDraw(); ">
             <u>N</u>ew Seeds
         </button>
+        {%- endif %}
         <hr>
         <div class="footer">
             <p>Interactive sketch generated with the assistance of <a
