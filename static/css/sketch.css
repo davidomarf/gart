@@ -45,7 +45,7 @@ form {
   grid-area: content;
 
   display: flex;
-  /* flex-direction: row; */
+  max-height: 100vh;
   justify-content: center;
   align-items: center;
 }
